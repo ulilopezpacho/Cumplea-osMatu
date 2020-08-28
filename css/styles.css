@@ -1,0 +1,56 @@
+body {
+    background-color: gray;
+}
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.pcontainer {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    border: dotted 1px;
+    margin: 20px 0 20px 0;
+    background-color: orange;
+}
+
+.img-container {
+    height: 550px;
+    width: 100%;
+    border: solid 1px;
+    margin: 20px 0 20px 0;
+}
+
+#botonNumero {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#lblSalieron {
+    text-align: center;
+    width: 100%;
+    font-size: 48px;
+}
+
+#imagenBingo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: auto;
+}
+
+#cantSalieron {
+    text-align: center;
+}
+
+.table {
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
