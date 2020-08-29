@@ -15,7 +15,7 @@ function getImageTag (num) {
     if (num > 56) img = "images/1 (" + num.toString() + ").jpg";
     else img = "images/1 (" + num.toString() + ").JPG";
 
-    return '<img class="img-fluid" src="' + img + '"/>';
+    return '<img class="img img-fluid" src="' + img + '"/>';
 }
 
 $("document").ready(() => {
@@ -25,18 +25,24 @@ $("document").ready(() => {
     var cant = 90;
     var queue = new Array(cant);
     var t = new Array();
+    var strBingo = "";
 
     for (let i = 0; i < cant; i++) queue[i] = i+1;
     queue = shuffle(queue);
 
     let put = '<div class="row">';
-    let col = '<div class="d-flex align-items-center justify-content-center col col-sm-12 col-md-6 col-lg-4 col-xl-3" id="image">';
+    let col = '<div class="content d-flex align-items-center justify-content-center col col-sm-12 col-md-6 col-lg-4 col-xl-3" id="image">';
     let divEnd = '</div>';
 
     for (let i = 0; i < 12; i++) {
         t.push(queue[i]);
         put += col + getImageTag(queue[i]) + divEnd;
+        strBingo += queue[i].toString() + "  ";
     }
     put += divEnd;
     tablero.html(put);
+
+    $(".endButton").click(() => {
+        alert(strBingo);
+    })
 });
