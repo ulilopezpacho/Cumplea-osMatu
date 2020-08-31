@@ -8,6 +8,15 @@ function shuffle (array) {
     return array;
 }
 
+function getImageTag (num) {
+
+    let img = "";
+    if (num > 56) img = "images/1 (" + num.toString() + ").jpg";
+    else img = "images/1 (" + num.toString() + ").JPG";
+    return '<img class="img img-fluid" src="' + img + '"/>';
+}
+
+
 $("document").ready(() => {
     
     var actual = 0;
@@ -46,7 +55,8 @@ $("document").ready(() => {
         let img = queue[actual] > 56? "images/1 (" + queue[actual].toString() + ").jpg" :
             "images/1 (" + queue[actual].toString() + ").JPG";
         
-        $("#t" + queue[actual++].toString()).css("background-color", "lightgreen");
+        //$("#t" + queue[actual++].toString()).css("background-color", "lightgreen");
+        $("#t" + queue[actual++].toString()).html()
         frame.attr("src", img);
         cantSalieron.html("Salieron " + actual.toString() + ", restan " + (cant - actual).toString());
     })
