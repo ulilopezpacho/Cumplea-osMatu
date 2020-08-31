@@ -11,10 +11,8 @@ function shuffle (array) {
 function getImageTag (num) {
 
     let img = "";
-
     if (num > 56) img = "images/1 (" + num.toString() + ").jpg";
     else img = "images/1 (" + num.toString() + ").JPG";
-
     return '<img class="img img-fluid" src="' + img + '"/>';
 }
 
@@ -31,7 +29,7 @@ $("document").ready(() => {
     queue = shuffle(queue);
 
     let put = '<div class="row">';
-    let col = '<div class="content d-flex align-items-center justify-content-center col col-sm-12 col-md-6 col-lg-4 col-xl-3" id="image">';
+    let col = '<div class="content d-flex align-items-center justify-content-center col-sm-12 col-md-6 col-lg-4 col-xl-3" id="image">';
     let divEnd = '</div>';
 
     for (let i = 0; i < 12; i++) {

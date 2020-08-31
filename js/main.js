@@ -55,8 +55,9 @@ $("document").ready(() => {
         let img = queue[actual] > 56? "images/1 (" + queue[actual].toString() + ").jpg" :
             "images/1 (" + queue[actual].toString() + ").JPG";
         
-        //$("#t" + queue[actual++].toString()).css("background-color", "lightgreen");
-        $("#t" + queue[actual++].toString()).html()
+        $("#t" + queue[actual].toString()).css("background-color", "lightgreen");
+        $("#t" + queue[actual].toString()).html(getImageTag(queue[actual]) + "<p>" + queue[actual].toString() + "</p>")
+        actual++;
         frame.attr("src", img);
         cantSalieron.html("Salieron " + actual.toString() + ", restan " + (cant - actual).toString());
     })
